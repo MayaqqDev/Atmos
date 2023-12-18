@@ -1,14 +1,24 @@
 package dev.mayaqq.atmos.registry;
 
 import dev.mayaqq.atmos.Atmos;
+import dev.mayaqq.atmos.block.entity.TimeChangerBlockEntity;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
+import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import team.reborn.energy.api.EnergyStorage;
 
 public class AtmosBlockEntities {
-    public static void register() {}
+    public static final BlockEntityType<TimeChangerBlockEntity> TIME_CHANGER = register("time_changer", FabricBlockEntityTypeBuilder.create(
+            TimeChangerBlockEntity::new,
+            AtmosBlocks.TIME_CHANGER
+    ).build());
+    public static void register() {
+        EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.energyStorage, TIME_CHANGER);
+    }
 
-    private static BlockEntityType<?> register(String name, BlockEntityType<?> blockEntityType) {
+    private static <T extends BlockEntity> BlockEntityType<T> register(String name, BlockEntityType<T> blockEntityType) {
         return Registry.register(Registries.BLOCK_ENTITY_TYPE, Atmos.id(name), blockEntityType);
     }
 }

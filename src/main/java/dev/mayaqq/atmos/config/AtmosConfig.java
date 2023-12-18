@@ -2,6 +2,9 @@ package dev.mayaqq.atmos.config;
 
 import com.google.gson.GsonBuilder;
 import dev.isxander.yacl3.config.v2.api.ConfigClassHandler;
+import dev.isxander.yacl3.config.v2.api.SerialEntry;
+import dev.isxander.yacl3.config.v2.api.autogen.AutoGen;
+import dev.isxander.yacl3.config.v2.api.autogen.CustomDescription;
 import dev.isxander.yacl3.config.v2.api.serializer.GsonConfigSerializerBuilder;
 import dev.mayaqq.atmos.Atmos;
 import net.fabricmc.loader.api.FabricLoader;
@@ -20,6 +23,11 @@ public class AtmosConfig {
         * @SerialEntry
         * public boolean example = true;
      */
+
+    @AutoGen(category = "energy")
+    @CustomDescription("atmos.config.time_changer_capacity.desc")
+    @SerialEntry
+    public int timeChangerCapacity = 50_000;
 
     public static final ConfigClassHandler<AtmosConfig> HANDLER = ConfigClassHandler.createBuilder(AtmosConfig.class)
             .id(Atmos.id("config"))
