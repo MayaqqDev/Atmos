@@ -20,6 +20,9 @@
     ],
     "main": [
       "dev.mayaqq.atmos.Atmos"
+    ],
+    "fabric-datagen": [
+      "dev.mayaqq.atmos.datagen.AtmosDatagen"
     ]
   },
   "mixins": [
