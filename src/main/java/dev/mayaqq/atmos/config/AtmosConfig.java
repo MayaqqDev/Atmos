@@ -15,16 +15,6 @@ import java.nio.file.Path;
 public class AtmosConfig {
     public static final Path configFile = FabricLoader.getInstance().getConfigDir().resolve("Atmos.json");
 
-    /*
-        * Add your config fields here
-        * Example:
-        * @AutoGen(category = "general", group = "general")
-        * @CustomDescription("yacl3.config.atmos:config.example.desc")
-        * @TickBox
-        * @SerialEntry
-        * public boolean example = true;
-     */
-
     @AutoGen(category = "energy")
     @CustomDescription("yacl3.config.atmos:config.time_changer_capacity.desc")
     @IntField(min = 1, max = 1_000_000)

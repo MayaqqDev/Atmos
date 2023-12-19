@@ -14,7 +14,6 @@ public class Atmos implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        // Keep this on top
         AtmosConfig.HANDLER.load();
 
         AtmosItems.register();
