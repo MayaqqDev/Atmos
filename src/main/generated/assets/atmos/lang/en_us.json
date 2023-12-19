@@ -1,0 +1,7 @@
+{
+  "block.atmos.time_changer": "Time Changer",
+  "itemGroup.atmos.atmos_group": "Atmos",
+  "yacl3.config.atmos:config.category.energy": "Energy",
+  "yacl3.config.atmos:config.timeChangerCapacity": "Time Changer Capacity",
+  "yacl3.config.atmos:config.time_changer_capacity.desc": "The maximum amount of energy the Time Changer can store."
+}

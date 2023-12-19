@@ -1,4 +1,4 @@
-package dev.mayaqq.atmos.block.entity;
+package dev.mayaqq.atmos.registry.block.entity;
 
 import dev.mayaqq.atmos.config.AtmosConfig;
 import dev.mayaqq.atmos.registry.AtmosBlockEntities;

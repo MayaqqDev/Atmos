@@ -1,10 +1,7 @@
 package dev.mayaqq.atmos;
 
 import dev.mayaqq.atmos.config.AtmosConfig;
-import dev.mayaqq.atmos.registry.AtmosBlockEntities;
-import dev.mayaqq.atmos.registry.AtmosBlocks;
-import dev.mayaqq.atmos.registry.AtmosItems;
-import dev.mayaqq.atmos.registry.AtmosScreenHandlers;
+import dev.mayaqq.atmos.registry.*;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -22,6 +19,7 @@ public class Atmos implements ModInitializer {
 
         AtmosItems.register();
         AtmosBlocks.register();
+        AtmosItemGroups.register();
         AtmosBlockEntities.register();
         AtmosScreenHandlers.register();
     }

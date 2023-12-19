@@ -9,7 +9,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.slot.Slot;
-import team.reborn.energy.api.EnergyStorage;
 
 public class TimeChangerScreenHandler extends ScreenHandler {
     private final int INVENTORY_START = 5;
@@ -44,7 +43,7 @@ public class TimeChangerScreenHandler extends ScreenHandler {
 
     @Override
     public boolean canUse(PlayerEntity player) {
-        return false;
+        return true;
     }
 
     private void addPlayerInventory(PlayerInventory inventory) {

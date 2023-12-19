@@ -5,6 +5,7 @@ import dev.isxander.yacl3.config.v2.api.ConfigClassHandler;
 import dev.isxander.yacl3.config.v2.api.SerialEntry;
 import dev.isxander.yacl3.config.v2.api.autogen.AutoGen;
 import dev.isxander.yacl3.config.v2.api.autogen.CustomDescription;
+import dev.isxander.yacl3.config.v2.api.autogen.IntField;
 import dev.isxander.yacl3.config.v2.api.serializer.GsonConfigSerializerBuilder;
 import dev.mayaqq.atmos.Atmos;
 import net.fabricmc.loader.api.FabricLoader;
@@ -25,7 +26,8 @@ public class AtmosConfig {
      */
 
     @AutoGen(category = "energy")
-    @CustomDescription("atmos.config.time_changer_capacity.desc")
+    @CustomDescription("yacl3.config.atmos:config.time_changer_capacity.desc")
+    @IntField(min = 1, max = 1_000_000)
     @SerialEntry
     public int timeChangerCapacity = 50_000;
 

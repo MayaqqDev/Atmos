@@ -1,8 +1,8 @@
-package dev.mayaqq.atmos.block;
+package dev.mayaqq.atmos.registry.block;
 
 import com.mojang.serialization.MapCodec;
-import dev.mayaqq.atmos.block.entity.TimeChangerBlockEntity;
 import dev.mayaqq.atmos.registry.AtmosBlockEntities;
+import dev.mayaqq.atmos.registry.block.entity.TimeChangerBlockEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;

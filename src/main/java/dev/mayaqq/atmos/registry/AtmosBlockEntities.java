@@ -1,7 +1,7 @@
 package dev.mayaqq.atmos.registry;
 
 import dev.mayaqq.atmos.Atmos;
-import dev.mayaqq.atmos.block.entity.TimeChangerBlockEntity;
+import dev.mayaqq.atmos.registry.block.entity.TimeChangerBlockEntity;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
@@ -14,6 +14,7 @@ public class AtmosBlockEntities {
             TimeChangerBlockEntity::new,
             AtmosBlocks.TIME_CHANGER
     ).build());
+
     public static void register() {
         EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.energyStorage, TIME_CHANGER);
     }
