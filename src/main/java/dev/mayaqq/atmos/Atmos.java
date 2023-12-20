@@ -21,6 +21,7 @@ public class Atmos implements ModInitializer {
         AtmosItemGroups.register();
         AtmosBlockEntities.register();
         AtmosScreenHandlers.register();
+        AtmosParticles.register();
     }
 
     public static Identifier id(String path) {

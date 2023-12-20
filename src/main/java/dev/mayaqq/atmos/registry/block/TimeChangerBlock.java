@@ -28,6 +28,7 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class TimeChangerBlock extends BlockWithEntity {
+    public static final MapCodec<TimeChangerBlock> CODEC = createCodec(TimeChangerBlock::new);
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public static final BooleanProperty CORRUPTED = BooleanProperty.of("corrupted");
 
@@ -40,7 +41,7 @@ public class TimeChangerBlock extends BlockWithEntity {
 
     @Override
     protected MapCodec<? extends BlockWithEntity> getCodec() {
-        return null;
+        return CODEC;
     }
 
     @Nullable
